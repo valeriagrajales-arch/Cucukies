@@ -1,0 +1,283 @@
+
+
+body {
+margin: 0;
+background-color: #fff0d6;
+color: #35150f;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SECCIÓN PRINCIPAL */
+.prductos{
+    padding: 20px 2.5% 40px;
+    background-color: #fff0d6;
+}
+/* TÍTULO Y PRESENTACIÓN */
+.producto-titulo{ 
+    min-height: 165px;
+    padding: 20px 4%;
+    margin-bottom: 14px;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: linear-gradient(
+        110deg,
+        #fff7e8
+        #ffe5bc
+    );
+}
+.producto-titulo h2{ 
+    color: #851c21;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    margin: 8px 0;
+    letter-spacing: -1px;
+}
+.producto-titulo p {
+  color: #35150f;
+  font-size: 14px;
+  margin: 5px 0;
+}
+/* ETIQUETA DECORATIVA */
+.producto-titulo::before{
+    content: "NUESTROS PRODUCTOS";
+    display: inline-block;
+
+    background-color: #f3ad55;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    padding: 6px 16px;
+    border-radius: 25px;
+}
+/* CUADRÍCULA DE PRODUCTOS */
+.productos-contenedor,
+.producto{
+  box-sizing: border-box;
+}
+/* Todos los productos deben estar en una cuadrícula */
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 2.5% 40px;
+    background-color: #fff0d6;
+}
+
+
+.productos-titulo {
+    grid-column: 1 / -1;
+
+    min-height: 170px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #F3D5B5,
+        #D9B08C,
+        #B98568
+    );
+    border: 2px solid #f0d2a6;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(133, 28, 39, 0.10);
+}
+
+.productos-titulo h2 {
+    color: #6F493A;
+    font-size: 36px;
+    font-weight: 900;
+    margin: 8px 0;
+}
+
+.productos-titulo p {
+    color: #63352b;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.productos-titulo::before {
+    content: "NUESTROS PRODUCTOS";
+
+    display: inline-block;
+    background-color: #851c27;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    padding: 7px 18px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+
+/* TARJETAS */
+.productos-contenedor,
+.producto{
+    min-width: 0;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fffaf0,
+     #fff0dc
+    );
+
+    border: 1px solid #f3dfc1;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(110, 54, 20, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.productos-contenedor,
+.producto {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(135deg, #fffaf0, #fff0dc);
+    border: 1px solid #f3dfc1;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(110, 54, 20, 0.10);
+
+}
+
+/* IMAGEN DE LA GALLETA */
+
+.productos-imagen {
+    width: 180px;
+    max-width: 100%;
+    height: 180px;
+    margin: 0 auto 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffdfa9;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.productos-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* NOMBRE DEL PRODUCTO */
+
+.producto h3,
+.productos-contenedor h3 {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 15px;
+    color: #35150f;
+}
+
+/* DESCRIPCIÓN */
+
+.description {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #725746;
+}
+
+/* PRECIO DEBAJO DE LA IMAGEN Y DESCRIPCIÓN */
+
+.precio {
+    width: 100%;
+    margin: 8px 0 10px;
+    color: #851c27;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* BOTÓN */
+
+.btn-producto {
+    background-color: #851c27;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 9px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-producto:hover {
+    background-color: #a52b37;
+}
+/* TABLET */
+
+@media (max-width: 900px) {
+    #productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .productos-imagen {
+        width: 125px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+    #productos {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .productos-titulo {
+        min-height: 130px;
+        padding: 15px;
+    }
+
+    .productos-titulo h2 {
+        font-size: 29px;
+    }
+
+    .productos-contenedor,
+    .producto {
+        width: 100%;
+    }
+
+    .productos-imagen {
+        width: 150px;
+    }
+}

@@ -1,0 +1,324 @@
+
+@font-face {
+    font-family: "Cucukies";
+    src: url("CUCUKIES (1).ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --crema: #F7E8CB;
+    --durazno: #F8D2A5;
+    --cafe: #88242C;
+    --vino: #70252C;
+    --blanco: #FFFDF9;
+    --texto: #4B2925;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+}
+
+/* Encabezado y menú */
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: var(--crema);
+}
+
+.logo {
+    width: 170px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--vino);
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #C65C64;
+}
+
+/* Presentación principal */
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--crema);
+    border-radius: 30px;
+    color: var(--vino);
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: "Cucukies", Arial, sans-serif;
+    font-size: clamp(38px, 6vw, 70px);
+    color: var(--texto);
+    margin: 25px 0 15px;
+}
+
+.hero h1 span {
+    color: var(--vino);
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--texto);
+}
+
+/* Sección de nosotros */
+.nosotros {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 25px 80px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.imagen,
+.contenido {
+    flex: 1;
+    min-width: 0;
+}
+
+.imagen {
+    background: #FCE5D8;
+    border-radius: 35px;
+    padding: 25px;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.contenido h2 {
+    font-family: "Cucukies", Arial, sans-serif;
+    font-size: 35px;
+    color: var(--vino);
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--vino);
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: var(--durazno);
+    color: var(--vino);
+    transform: translateY(-3px);
+}
+
+/* Tarjetas informativas */
+.tarjetas {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background: #FCE9DC;
+    padding: 30px;
+    border-radius: 25px;
+    border-bottom: 5px solid var(--cafe);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px #70252C20;
+}
+
+.icono {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--vino);
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    line-height: 1.7;
+}
+
+/* Valores de la marca */
+.valores {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.valores h2 {
+    font-family: "Cucukies", Arial, sans-serif;
+    font-size: 36px;
+    color: var(--vino);
+    margin-bottom: 12px;
+}
+
+.valores .subtitulo {
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+
+.lista-valores {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.valor {
+    padding: 25px 15px;
+    background: #FFF5E8;
+    border-radius: 30px;
+    border: 2px solid var(--crema);
+    transition: 0.3s;
+}
+
+.valor:hover {
+    background: var(--crema);
+    transform: translateY(-5px);
+}
+
+.valor span {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.valor h3 {
+    color: var(--vino);
+    margin-bottom: 10px;
+}
+
+.valor p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Frase final y pie de página */
+.frase-final {
+    background: var(--vino);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 30px 30px 0 0;
+}
+
+.frase-final h2 {
+    font-family: "Cucukies", Arial, sans-serif;
+    font-size: clamp(24px, 4vw, 38px);
+    margin-bottom: 15px;
+}
+
+.frase-final p {
+    color: var(--crema);
+}
+
+.pie {
+    text-align: center;
+    background: var(--crema);
+    color: var(--vino);
+    padding: 25px 15px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Adaptación a tabletas */
+@media (max-width: 850px) {
+    .nosotros {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imagen,
+    .contenido {
+        width: 100%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-valores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 550px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 145px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .contenido h2,
+    .valores h2 {
+        font-size: 29px;
+    }
+
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+}
